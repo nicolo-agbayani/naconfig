@@ -1,0 +1,97 @@
+
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+		{
+			"alignment": "left",
+			"segments": [
+				{
+					"type": "os",
+					"foreground": "#ffffff",
+					"background": "#160040",
+					"style": "diamond",
+					"leading_diamond": "",
+
+					"template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+				},
+				{
+					"type": "session",
+					"foreground": "#ffffff",
+					"background": "#160040",
+					"style": "powerline",
+					"powerline_symbol": "\ue0b0",
+					"template": "{{ .UserName }} "
+				},
+				{
+					"type": "path",
+					"foreground": "#ffffff",
+					"background": "#4C0070",
+					"style": "powerline",
+					"powerline_symbol": "\ue0b0",
+					"template": " {{ .Path }} ",
+					"properties": {
+						"style": "full"
+					}
+				},
+				{
+					"type": "exit",
+					"foreground": "#ffffff",
+					"background": "#79018C",
+					"style": "accordion",
+					"powerline_symbol": "\ue0b0",
+					"template": "{{ if gt .Code 0 }}\uf071{{ .Meaning }}{{ else }}{{ end }}"
+				}
+			],
+
+			"type": "prompt"
+		},
+		{
+			"alignment": "right",
+			"segments": [
+				{
+					"type": "git",
+					"foreground": "#ffffff",
+					"background": "#79018C",
+					"style": "accordion",
+					"powerline_symbol": "\uE0B2",
+					"invert_powerline": true,
+					"template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }} ",
+					"properties": {
+						"fetch_status": true,
+						"fetch_stash_count": true,
+						"fetch_upstream_icon": true,
+						"untracked_modes": {
+							"/Users/user/Projects/oh-my-posh/": "no"
+						}
+					}
+				},
+				{
+					"type": "time",
+					"foreground": "#ffffff",
+					"background": "#4C0070",
+					"style": "powerline",
+					"powerline_symbol": "\ue0b2",
+					"invert_powerline": true,
+					"template": " {{ .CurrentDate | date .Format }} ",
+					"properties": {
+						"time_format": "15:04"
+					}
+				},
+				{
+					"type": "executiontime",
+					"foreground": "#ffffff",
+					"background": "#160040",
+					"style": "diamond",
+					"trailing_diamond": "",
+					"invert_powerline": true,
+					"template": " {{ .FormattedMs }} ",
+					"properties": {
+						"always_enabled": true
+					}
+				}
+			],
+			"type": "rprompt"
+		}
+	],
+	"final_space": true,
+	"version": 2
+}

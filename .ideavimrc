@@ -1,5 +1,3 @@
-source ./.vimrc
-
 sethandler <C-A> a:ide
 sethandler <C-C> a:ide
 sethandler <C-S> a:ide

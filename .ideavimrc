@@ -1,0 +1,12 @@
+source ./.vimrc
+
+sethandler <C-A> a:ide
+sethandler <C-C> a:ide
+sethandler <C-S> a:ide
+sethandler <C-V> a:ide
+sethandler <C-Z> a:ide
+
+sethandler <C-H> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim

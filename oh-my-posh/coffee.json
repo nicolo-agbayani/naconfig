@@ -103,19 +103,17 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffffff",
-          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
+          "type": "text",
+          "foreground": "#d4c3a5",
+          "style": "plain",
           "properties": {
             "always_enabled": true
           },
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "status"
+          "template": "\ue285 "
         }
       ],
       "type": "prompt"
     }
   ],
-  "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.Folder | replace \"~\" \"🏚\" }} @ {{.HostName}}",
   "version": 3
 }

@@ -69,7 +69,7 @@
           "background": "#25221d",
           "style": "powerline",
           "powerline_symbol": "\ue0bc",
-          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf0193 {{ .StashCount }}{{ end }} {{ if .HEAD }}\ue0bd{{ end }}",
+          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \udb80\udd93 {{ .StashCount }}{{ end }} {{ if .HEAD }}\ue0bd{{ end }}",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,

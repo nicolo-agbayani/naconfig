@@ -1,5 +1,6 @@
 sethandler <C-A> a:ide
 sethandler <C-C> a:ide
+sethandler <C-F> a:ide
 sethandler <C-Q> a:ide
 sethandler <C-S> a:ide
 sethandler <C-V> a:ide
